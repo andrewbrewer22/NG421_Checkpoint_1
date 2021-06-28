@@ -20,6 +20,6 @@ export class TodoService {
   }
   addTodo(todo: ITodo):void {
     todo.id = this.todoId ++;
-    todoList.push(todo);
+    this.todoList.push(todo);
   }
 }

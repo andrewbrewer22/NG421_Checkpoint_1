@@ -28,6 +28,6 @@ const appRoutes = RouterModule.forRoot(routes);
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: []
+  entryComponents: [ConfirmationModalComponent]
 })
 export class AppModule { }
