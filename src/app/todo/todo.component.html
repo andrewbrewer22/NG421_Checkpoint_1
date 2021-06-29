@@ -1,5 +1,5 @@
 <div class="view">
-    <label (dblclick)="isEditing = true">{{todo.title}}</label>
+    <label (dblclick)="isEditing = true" [ngClass]="getTitleClass">{{todo.title}}</label>
     <input *ngIf="isEditing" type="text" [(ngModel)]="todo.title" (blur)="isEditing=false"/>
     <div class="float-right">
         <button type="button" (click)="deleteTodo(todo)" class="btn btn-danger btn-sm">Delete</button>

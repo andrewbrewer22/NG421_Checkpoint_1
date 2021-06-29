@@ -38,12 +38,31 @@ async editTodo(todo: ITodo) {
   const modal = this.modalService.open(TodoEditComponent);
   modal.componentInstance.modalInstance = modal;
   modal.componentInstance.todo = todo;
-  try{
+  try {
     const result = await modal.result;
     this.todo.description = result;
-  }
-  catch (ex){
+  } catch (ex) {
     console.log(ex);
   }
+}
+
+get IsTodo(): boolean {
+  return this.todo !== undefined && this.todo.status === 'Todo';
+}
+
+get IsDoing() : boolean {
+  return this.todo !== undefined && this.todo.status === 'Doing';
+}
+
+get IsDone() : boolean {
+  return this.todo !== undefined && this.todo.status === 'Done';
+}
+
+get getTitleClass(): any {
+  return {
+    todo: this.IsDone,
+    doing: this.IsDoing,
+    done: this.IsDone
+  };
 }
 }
