@@ -6,8 +6,8 @@ import {ITodo} from './interfaces/itodo';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  title = "Todos";
+export class AppComponent implements OnInit {
+  title = 'Todos';
   ngOnInit() {
 
   }
