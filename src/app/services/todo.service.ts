@@ -8,6 +8,8 @@ export class TodoService {
   todoList: ITodo [] = [
     // example of how to make an item in todo list
     { title: 'Install Angular CLI', id: this.todoId, status: 'Todo', createdAt: new Date()},
+    { title: 'Install Angular CLI', id: this.todoId, status: 'Doing', createdAt: new Date()},
+    { title: 'Install Angular CLI', id: this.todoId, status: 'Done', createdAt: new Date()},
   ];
 
   statuses: string[] = ['Todo', 'Doing', 'Done'];
